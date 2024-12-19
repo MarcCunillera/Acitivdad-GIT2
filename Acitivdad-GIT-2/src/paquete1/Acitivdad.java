@@ -3,18 +3,21 @@ package paquete1;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Acitivdad {
+public class Actividad {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+    	// TODO Auto-generated method stub
+    	
         Scanner s = new Scanner(System.in);
         Random random = new Random();
 
         int[][] matriz = new int[5][5];
+        int sumaTotal = 0;
 
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 matriz[i][j] = random.nextInt(100) + 1; 
+                sumaTotal += matriz[i][j];
             }
         }
         
@@ -47,7 +50,8 @@ public class Acitivdad {
             System.out.println("El número no existe en la matriz.");
         }
 
-        
-	}
+        System.out.println("La suma de todos los números en la matriz es: " + sumaTotal);
 
+        s.close();
+    }
 }
